@@ -29,7 +29,7 @@ def crear_perfil(nombre: str, edad: int, *hobbies: str, **redes_sociales: str) -
         ValueError: Si alguno de los valores ingresados no cumple con las validaciones.
     """
 
-    # Validaciones
+    # Validaciones de entrada
     if not isinstance(nombre, str) or not nombre.strip():
         raise ValueError("El nombre no debe estar vacío.")
 
@@ -67,7 +67,7 @@ def crear_perfil(nombre: str, edad: int, *hobbies: str, **redes_sociales: str) -
 
     return perfil
 
-
+# Función principal para interacción por consola
 def main():
     """Función principal para interactuar con el usuario por consola."""
     while True:
