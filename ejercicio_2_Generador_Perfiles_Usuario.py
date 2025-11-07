@@ -45,7 +45,8 @@ def crear_perfil(nombre: str, edad: int, *hobbies: str, **redes_sociales: str) -
     if any(not isinstance(h, str) or not h.strip() for h in hobbies):
         raise ValueError("Todos los hobbies deben ser cadenas no vacías.")
 
-    if any(not isinstance(k, str) or not isinstance(v, str) for k, v in redes_sociales.items()):
+    if any(not isinstance(k, str) or not isinstance(v, str) for k, v in
+           redes_sociales.items()):
         raise ValueError("Las redes sociales deben ser cadenas (clave y valor).")
 
     # Construcción del perfil
@@ -83,7 +84,7 @@ def main():
 
             edad_input = input("Ingrese la edad del usuario: ").strip()
             if not edad_input.isdigit():
-                raise ValueError("Debe ingresar un número válido para la edad.")
+                raise ValueError("Debe ingresar un número " "válido para la edad.")
             edad = int(edad_input)
             if edad <= 0:
                 raise ValueError("La edad debe ser mayor que cero.")
@@ -95,7 +96,8 @@ def main():
             # Ingreso de redes sociales
             redes_sociales = {}
             while True:
-                agregar = input("¿Desea agregar una red social? (s/n): ").lower().strip()
+                agregar = (input("¿Desea agregar una red social? (s/n): ")
+                           .lower().strip())
                 if agregar == "n":
                     break
                 elif agregar == "s":
