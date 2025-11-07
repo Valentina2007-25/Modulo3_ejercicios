@@ -1,0 +1,17 @@
+[
+  {
+    "libro_id": "001",
+    "titulo": "Cien Años de Soledad",
+    "prestado_a": null
+  },
+  {
+    "libro_id": "002",
+    "titulo": "El Principito",
+    "prestado_a": null
+  },
+  {
+    "libro_id": "003",
+    "titulo": "1984",
+    "prestado_a": "Laura"
+  }
+]
