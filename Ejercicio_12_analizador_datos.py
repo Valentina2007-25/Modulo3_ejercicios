@@ -41,7 +41,7 @@ def analizar_csv(nombre_archivo: str, columna: str) -> Dict[str, float]:
                     pass  # Ignora valores no numéricos
 
     except FileNotFoundError:
-        console.print(f"[red]❌ Archivo '{nombre_archivo}' no encontrado.[/red]")
+        console.print(f"[red] Archivo '{nombre_archivo}' no encontrado.[/red]")
         return {}
 
     if not valores:
